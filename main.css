@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
+.section.no-pad-bot
+{
+	padding-bottom:14px !important;
+}
+#show-case a
+{
+  text-decoration: underline;
+  color:#600;
+}
+#location
+{
+	white-space: nowrap !important;
+}
