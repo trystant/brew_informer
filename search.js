@@ -1,3 +1,6 @@
+var BreweryDb = require('brewerydb-node');
+var brewdb = new BreweryDb('API_KEY');
+breweries();
 	//-------------------------------SELECT CASCADING-------------------------//
   	var currentCities=[];
 // This is a demo API key that can only be used for a short period of time, and will be unavailable soon. You should rather request your API key (free)  from http://battuta.medunes.net/ 	
@@ -96,6 +99,7 @@ var BATTUTA_KEY= "bb03b960b7d675d47e5d78b1795da95c";
       country=currentCity.country;
       lat=currentCity.latitude;
       lng=currentCity.longitude;
-      $("#location").html('<i class="fa fa-map-marker"></i> <strong> '+city+"/"+region+"</strong>("+lat+","+lng+")");
+      // $("#location").html('<i class="fa fa-map-marker"></i> <strong> '+city+"/"+region+"</strong>("+lat+","+lng+")");
+      $("#location").html('<span class="random-sentence">This is were the results will show up</span>');
     });
    //-------------------------------END OF SELECT CASCADING-------------------------//
