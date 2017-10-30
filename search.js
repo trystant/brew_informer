@@ -4,9 +4,9 @@ breweries();
 	//-------------------------------SELECT CASCADING-------------------------//
   	var currentCities=[];
 // This is a demo API key that can only be used for a short period of time, and will be unavailable soon. You should rather request your API key (free)  from http://battuta.medunes.net/ 	
-var BATTUTA_KEY= "bb03b960b7d675d47e5d78b1795da95c";
+//var config.battuta_key= "bb03b960b7d675d47e5d78b1795da95c";
   	// Populate country select box from battuta API
-	url="https://battuta.medunes.net/api/country/all/?key="+ BATTUTA_KEY +"&callback=?";
+	url="https://battuta.medunes.net/api/country/all/?key="+ config.battuta_key +"&callback=?";
   	$.getJSON(url,function(countries)
   	{
   		console.log(countries);
@@ -35,7 +35,7 @@ var BATTUTA_KEY= "bb03b960b7d675d47e5d78b1795da95c";
   		// Populate country select box from battuta API
 	    url="https://battuta.medunes.net/api/region/"
 	    +countryCode
-	    +"/all/?key="+BATTUTA_KEY+"&callback=?";
+	    +"/all/?key="+config.battuta_key+"&callback=?";
 
   		$.getJSON(url,function(regions)
   		{
@@ -66,7 +66,7 @@ var BATTUTA_KEY= "bb03b960b7d675d47e5d78b1795da95c";
 	    +"/search/?region="
 	    +region
 	    +"&key="
-	    +BATTUTA_KEY
+	    +config.battuta_key
 	    +"&callback=?";
   		
   		$.getJSON(url,function(cities)
